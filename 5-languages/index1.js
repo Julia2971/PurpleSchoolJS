@@ -1,7 +1,7 @@
-const lang = 'ru';
+const lang = prompt('Введите свой язык', 'ru');
 
 switch(lang) {
-    case 'ru': // lang === 'ru'
+    case 'ru': 
          console.log('Привет!');
          break;
     case 'en' : 
@@ -11,5 +11,5 @@ switch(lang) {
          console.log('Bonjour!');
          break;
     default: 
-    console.log( 'I do not know your language')
+    console.log('I do not know your language')
 };
