@@ -1,10 +1,7 @@
 function crypto(passw){
     const changePassw = passw.split('');  
     const partOfPassw = changePassw.splice(0, 4).reverse();
-    const newPassw = changePassw.reverse().concat(partOfPassw).join('');
-    return newPassw;
-
-
+    return newPassw = changePassw.reverse().concat(partOfPassw).join('');
 }
 
 function check(res, passw) {
