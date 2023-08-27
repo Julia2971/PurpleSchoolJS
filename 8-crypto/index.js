@@ -1,18 +1,17 @@
-function crypto(passw){
-    const changePassw = passw.split('');  
-    const partOfPassw = changePassw.splice(0, 4).reverse();
-    return newPassw = changePassw.reverse().concat(partOfPassw).join('');
+function crypto(passward, numberOne, numberSecond) {
+  const changePassward = passward.split("");
+  const partOfPassward = changePassward
+    .splice(numberOne, numberSecond)
+    .reverse();
+  return (newPassward = changePassward
+    .reverse()
+    .concat(partOfPassward)
+    .join(""));
 }
 
-function check(res, passw) {
-    const makePassw = res.split('')
-    const newPartOsPassw = makePassw.splice(-4);
-    const newPassw2 = newPartOsPassw.reverse().concat(makePassw.reverse()).join('');
-    if (newPassw2 === passw){
-        console.log(true)
-    } else {
-        console.log(false)
-    }
-};
-check(crypto('password'), 'password')
+function check(result, passward) {
+  const newPassward = crypto(result, -4);
+  return newPassward === passward;
+}
 
+console.log(check(crypto("password", 0, 4), "password"));
